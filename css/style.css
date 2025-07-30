@@ -1,1 +1,145 @@
 
+   body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+.header-img {
+  width: 4cm;
+  height: 4cm;
+  object-fit: cover;
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.school-subtitle {
+  font-size: 1rem;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+.school-title {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .school-title {
+    font-size: 1.5rem;
+    white-space: normal;
+  }
+  .school-subtitle {
+    font-size: 0.9rem;
+  }
+}
+
+
+ .navbar {
+  background: linear-gradient(to right, #0d6efd, #ffffff);
+  border-bottom: 3px solid #0a58ca;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: #fff !important;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-nav .nav-link {
+  margin: 0 10px;
+  padding: 8px 20px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  color: #fff !important;
+  background-color: #0a58ca;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #ffedcb;
+  color: #000 !important;
+  border-color: #000000;
+}
+
+   /* Hero Section - Carousel Specific Styles */
+.carousel-item {
+    height: 450px; /* Adjust to your desired height for the hero section */
+    background-color: #777; /* Fallback background color */
+    position: relative; /* Needed for positioning the caption */
+}
+
+.carousel-item .hero-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images cover the area without distortion */
+    filter: brightness(60%); /* Darkens the image to make text more readable */
+}
+
+.carousel-caption {
+    position: absolute; /* Needed for d-flex centering to work correctly within carousel-item */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10; /* Ensures text is above the image */
+    display: flex; /* Applies d-flex utilities from Bootstrap */
+    align-items: center; /* Vertically centers content */
+    justify-content: center; /* Horizontally centers content */
+    color: white; /* Ensure text is white */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adds shadow for readability */
+}
+
+.carousel-caption h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.carousel-caption p {
+    font-size: 1.3rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Remove the old .hero-section style as it's now handled by the carousel */
+/* You had this:
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1588072432836-e10b1a6a9b52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTQwNDV8MHwxfHNlYXJjaHwyMHx8c2Nob29sJTIwYnVpbGRpbmd8ZW5wfDB8fHx8fDE3MjAwOTc5NTB8MA&ixlib=rb-4.0.3&q=80&w=1080') center/cover no-repeat;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-out;
+}
+*/
+
+    .hero-overlay {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 60px 20px;
+      width: 100%;
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+      transition: all 0.3s ease;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: #fff;
+      padding: 20px 0;
+    }
