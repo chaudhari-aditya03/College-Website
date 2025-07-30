@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Amruteshwar Secondary and Higher Secondary School</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            /* Light background for the whole page */
+            color: #333;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1588072432836-e10b1a6a9b52?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0NTQwNDV8MHwxfHNlYXJjaHwyMHx8c2Nob29sJTIwYnVpbGRpbmd8ZW58MHx8fHwxNzIwMDk3OTUwfDA&ixlib=rb-4.0.3&q=80&w=1080') center/cover no-repeat;
+            min-height: 450px;
+            /* Reduced height for better balance */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-section p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Section Title Styling */
+        .section-title {
+            font-weight: 700;
+            font-size: 2.5rem;
+            color: #0d6efd;
+            margin-bottom: 40px;
+            position: relative;
+            padding-bottom: 15px;
+            text-align: center;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: #ffc107;
+            border-radius: 2px;
+        }
+
+        /* Card Styling */
+        .about-card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+            overflow: hidden;
+            background-color: #fff;
+            height: 100%;
+            /* Ensure cards are same height */
+        }
+
+        .about-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-card .card-body {
+            padding: 30px;
+        }
+
+        .about-card .card-title {
+            font-weight: 600;
+            color: #0d6efd;
+            margin-bottom: 15px;
+            font-size: 1.6rem;
+        }
+
+        .about-card .card-text {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .about-card img {
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            height: 250px;
+            /* Fixed height for images */
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .icon-feature {
+            font-size: 2.5rem;
+            color: #ffc107;
+            margin-bottom: 15px;
+        }
+
+        /* Values Section specific styling */
+        .values-list li {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        .values-list li i {
+            color: #0d6efd;
+            margin-right: 10px;
+        }
+
+        /* Testimonial Section */
+        .testimonial-section {
+            background-color: #f0f4f7;
+            padding: 60px 0;
+        }
+
+        .testimonial-card {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .testimonial-card i.fas.fa-quote-left {
+            font-size: 2.5rem;
+            color: #ffc107;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            opacity: 0.3;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .testimonial-card .author {
+            font-weight: 600;
+            color: #0d6efd;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #212529;
+            color: #adb5bd;
+            padding: 30px 0;
+            font-size: 0.9rem;
+            border-top: 3px solid #0d6efd;
+        }
+
+        footer p {
+            margin-bottom: 5px;
+        }
+
+        /* NEW CSS FOR SECTION BACKGROUND IMAGE */
+        .a1 {
+            background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('./img/gate.jpeg') center center / cover no-repeat;
+            background-attachment: fixed; /* Optional: for parallax effect */
+            position: relative;
+            z-index: 1; /* Ensure content is above the background */
+        }
+
+        /* Adjust content inside the section to be readable over the background */
+        .section-with-background .container {
+            position: relative;
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid bg-primary text-white py-3">
+        <div class="d-flex align-items-center justify-content-between flex-wrap">
+
+            <div class="text-center flex-shrink-0">
+                <img src="img/clglogo.png" class="img-fluid header-img" alt="Left Logo" />
+            </div>
+
+            <div class="flex-grow-1 text-center px-2">
+                <div class="school-subtitle">Sahyadri Bahujan Vidya Prasarak Samaj's</div>
+                <h1 class="school-title">Amruteshwar Secondary and Higher Secondary School.,<br>Sangamner KH.</h1>
+            </div>
+
+            <div class="text-center flex-shrink-0">
+                <img src="img/data.png" class="img-fluid header-img" alt="Right Logo" />
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav text-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admissions.html">Admissions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="a1">
+    <section class="hero-section d-flex align-items-center justify-content-center py-5">
+        <div class="text-center text-white p-4">
+            <h1 class="display-3 fw-bold">About Our School</h1>
+            <p class="lead mt-3">Cultivating Minds, Building Futures, Shaping Communities.</p>
+        </div>
+    </section>
+    </div>
+
+    ---
+
+    <section class="py-5 bg-light section-with-background" id="mission-vision">
+        <div class="container">
+            <h2 class="section-title">Our Philosophy</h2>
+            <div class="row align-items-center g-4">
+                <div class="col-md-6">
+                    <div class="about-card p-4 h-100">
+                        <div class="card-body">
+                            <i class="fas fa-eye icon-feature mb-3"></i>
+                            <h4 class="card-title">Our Vision</h4>
+                            <p class="card-text">To be a beacon of educational excellence in Sangamner KH and beyond,
+                                fostering a dynamic learning environment that inspires students to achieve their full
+                                potential, embrace lifelong learning, and contribute positively to society.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="about-card p-4 h-100">
+                        <div class="card-body">
+                            <i class="fas fa-bullseye icon-feature mb-3"></i>
+                            <h4 class="card-title">Our Mission</h4>
+                            <p class="card-text">We are dedicated to providing a comprehensive and balanced education
+                                that empowers every student with critical knowledge, essential skills, and strong
+                                ethical values. We strive to create a nurturing community where curiosity is ignited,
+                                creativity flourishes, and every individual feels valued and supported.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    ---
+
+    <section class="py-5" id="history">
+        <div class="container">
+            <h2 class="section-title">Our Journey</h2>
+            <div class="row align-items-center gx-5">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="img/gate.jpeg" class="img-fluid rounded shadow-lg" alt="School History">
+                </div>
+                <div class="col-md-6">
+                    <p class="lead">Established in **[Year of Establishment - e.g., 1985]**, Amruteshwar Secondary
+                        and Higher Secondary School has been a cornerstone of education in Sangamner KH for decades.
+                    </p>
+                    <p>Founded by the **Sahyadri Bahujan Vidya Prasarak Samaj**, our institution began with a vision to
+                        provide quality education to the local community, promoting academic excellence and holistic
+                        development. Over the years, we have grown from a small school into a comprehensive educational
+                        hub, continually adapting to the evolving needs of our students and society.</p>
+                    <p>We take immense pride in our rich heritage, the thousands of successful alumni who have passed
+                        through our gates, and our unwavering commitment to shaping future leaders and responsible
+                        citizens.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    ---
+
+    <section class="py-5 bg-light" id="values">
+        <div class="container">
+            <h2 class="section-title">Core Values</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <div class="about-card h-100 text-center">
+                        <div class="card-body">
+                            <i class="fas fa-graduation-cap icon-feature"></i>
+                            <h5 class="card-title">Academic Excellence</h5>
+                            <p class="card-text">Striving for the highest standards in teaching and learning,
+                                encouraging intellectual curiosity and critical thinking.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="about-card h-100 text-center">
+                        <div class="card-body">
+                            <i class="fas fa-hand-holding-heart icon-feature"></i>
+                            <h5 class="card-title">Integrity & Ethics</h5>
+                            <p class="card-text">Upholding honesty, respect, and strong moral principles in all
+                                interactions and endeavors.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="about-card h-100 text-center">
+                        <div class="card-body">
+                            <i class="fas fa-users icon-feature"></i>
+                            <h5 class="card-title">Community & Collaboration</h5>
+                            <p class="card-text">Fostering a sense of belonging, teamwork, and mutual support among
+                                students, staff, and parents.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="about-card h-100 text-center">
+                        <div class="card-body">
+                            <i class="fas fa-lightbulb icon-feature"></i>
+                            <h5 class="card-title">Innovation & Adaptability</h5>
+                            <p class="card-text">Embracing new ideas and methodologies to prepare students for a
+                                rapidly changing world.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="about-card h-100 text-center">
+                        <div class="card-body">
+                            <i class="fas fa-seedling icon-feature"></i>
+                            <h5 class="card-title">Holistic Development</h5>
+                            <p class="card-text">Nurturing intellectual, emotional, social, physical, and spiritual
+                                growth in every child.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    ---
+
+    <section class="py-5" id="facilities">
+        <div class="container">
+            <h2 class="section-title">Our Facilities</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <div class="col">
+                    <div class="about-card text-center h-100">
+                        <img src="img/classroom.jpeg"
+                            class="card-img-top" alt="Modern Classrooms">
+                        <div class="card-body">
+                            <h5 class="card-title">Modern Classrooms</h5>
+                            <p class="card-text">Spacious and well-lit classrooms equipped with smart learning tools
+                                for an engaging educational experience.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="about-card text-center h-100">
+                        <img src="img/lab.jpeg"
+                            class="card-img-top" alt="Science Labs">
+                        <div class="card-body">
+                            <h5 class="card-title">Advanced Laboratories</h5>
+                            <p class="card-text">Fully equipped Physics, Chemistry, and Biology labs for hands-on
+                                experimental learning.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="about-card text-center h-100">
+                        <img src="img/comp.jpeg"
+                            class="card-img-top" alt="Computer Lab">
+                        <div class="card-body">
+                            <h5 class="card-title">Computer Lab & Library</h5>
+                            <p class="card-text">State-of-the-art computer lab with internet access and a well-stocked
+                                library for research and reading.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="about-card text-center h-100">
+                        <img src="img/sports.jpeg"
+                            class="card-img-top" alt="Sports Facilities">
+                        <div class="card-body">
+                            <h5 class="card-title">Sports & Recreation</h5>
+                            <p class="card-text">Expansive playgrounds and facilities for various sports, promoting
+                                physical fitness and teamwork.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="about-card text-center h-100">
+                        <img src="img/DrawingRoom.jpeg"
+                            class="card-img-top" alt="Auditorium">
+                        <div class="card-body">
+                            <h5 class="card-title"> Art Rooms</h5>
+                            <p class="card-text">A modern auditorium for events and dedicated rooms for art, music, and
+                                cultural activities.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="about-card text-center h-100">
+                        <img src="img/library.jpeg"
+                            class="card-img-top" alt="Cafeteria">
+                        <div class="card-body">
+                            <h5 class="card-title">Library </h5>
+                            <p class="card-text">A clean and spacious cafeteria providing nutritious and delicious
+                                meals for students and staff.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    ---
+
+    <section class="py-5 bg-light" id="leadership">
+        <div class="container">
+            <h2 class="section-title">Our Leadership</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <div class="about-card p-4">
+                        <img src="img/sir.png" class="rounded-circle mb-3 shadow"
+                            alt="Principal" style="width: 150px; height: 150px; object-fit: cover;">
+                        <h4 class="card-title">Dr. Anjali Sharma</h4>
+                        <p class="text-muted mb-3">Principal</p>
+                        <p class="card-text">Dr. Sharma leads our school with a vision for innovative education and
+                            student-centric learning. Her dedication to fostering a supportive and challenging academic
+                            environment is paramount to our success. She believes in empowering every student to become
+                            a confident, capable, and compassionate individual.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    ---
+
+    <section class="testimonial-section py-5" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Community Says</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="testimonial-card">
+                        <i class="fas fa-quote-left"></i>
+                        <p class="lead">"Amruteshwar School has been an incredible journey for my children. The teachers
+                            are dedicated, the facilities are top-notch, and the focus on holistic development truly
+                            stands out. My kids love coming to school every day!"</p>
+                        <p class="author">- Mrs. Kavita Patil, Proud Parent</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Amruteshwar Secondary and Higher Secondary School. All Rights Reserved.</p>
+            <p class="mb-0">Designed with <i class="fas fa-heart text-danger"></i> by [Your Name/Developer Name]</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        ScrollReveal().reveal('.hero-section h1, .hero-section p', {
+            delay: 200,
+            distance: '30px',
+            origin: 'top',
+            duration: 800,
+            easing: 'ease-in-out'
+        });
+
+        ScrollReveal().reveal('.section-title', {
+            delay: 100,
+            distance: '40px',
+            origin: 'top',
+            duration: 900,
+            easing: 'ease-in-out'
+        });
+
+        ScrollReveal().reveal('.about-card, #history img, #history .col-md-6 p', {
+            delay: 200,
+            distance: '60px',
+            origin: 'bottom',
+            duration: 1000,
+            interval: 100,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)'
+        });
+
+        ScrollReveal().reveal('.testimonial-card', {
+            delay: 300,
+            distance: '50px',
+            origin: 'bottom',
+            duration: 1000,
+            easing: 'cubic-bezier(0.5, 0, 0, 1)'
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery - Amruteshwar Secondary and Higher Secondary School</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+ <link rel="stylesheet" href="css/style.css">
+ <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+      /* Light background for overall page */
+    }
+
+
+
+    .gallery-img {
+      height: 250px;
+      object-fit: cover;
+      border-radius: 12px;
+      /* More rounded corners */
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+      /* Deeper shadow for images */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery-img:hover {
+      transform: scale(1.03);
+      /* Slightly enlarge on hover */
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    }
+
+    .gallery-section h2 {
+      font-weight: 700;
+      color: #004085;
+      /* Dark blue for heading */
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .gallery-section h2::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -10px;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background-color: #0d6efd;
+      border-radius: 2px;
+    }
+
+    .filter-buttons .btn {
+      margin: 5px;
+      border-radius: 20px;
+      /* Pill-shaped filter buttons */
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .filter-buttons .btn.active {
+      background-color: #0d6efd;
+      color: #fff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .footer {
+      background-color: #212529;
+      /* Darker footer */
+      color: #adb5bd;
+      /* Lighter gray text */
+      padding: 25px 0;
+      font-size: 0.9rem;
+      border-top: 3px solid #0d6efd;
+    }
+  </style>
+</head>
+
+<body>
+ <div class="container-fluid bg-primary text-white py-3">
+  <div class="d-flex align-items-center justify-content-between flex-wrap">
+    
+    <!-- Left Logo -->
+    <div class="text-center flex-shrink-0">
+      <img src="img/clglogo.png" class="img-fluid header-img" alt="Left Logo" />
+    </div>
+    
+    <!-- Center Title -->
+    <div class="flex-grow-1 text-center px-2">
+      <div class="school-subtitle">Sahyadri Bahujan Vidya Prasarak Samaj's</div>
+      <h1 class="school-title">Amruteshwar Secondary and Higher Secondary School.,<br>Sangamner KH.</h1>
+    </div>
+    
+    <!-- Right Logo -->
+    <div class="text-center flex-shrink-0">
+      <img src="img/data.png" class="img-fluid header-img" alt="Right Logo" />
+    </div>
+  </div>
+</div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+          <li class="nav-item"><a class="nav-link" href="admissions.html">Admissions</a></li>
+          <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="container py-5 gallery-section">
+    <h2 class="text-center mb-5">Our School & College Gallery</h2>
+
+    <div class="d-flex justify-content-center mb-4 filter-buttons">
+      <button type="button" class="btn btn-outline-primary active" data-filter="all">All</button>
+      <button type="button" class="btn btn-outline-primary" data-filter="campus">Campus</button>
+      <button type="button" class="btn btn-outline-primary" data-filter="events">Events</button>
+      <button type="button" class="btn btn-outline-primary" data-filter="labs">Labs</button>
+      <button type="button" class="btn btn-outline-primary" data-filter="sports">Sports</button>
+    </div>
+
+    <div class="row g-4 gallery-container">
+      <div class="col-md-4 gallery-item" data-category="campus">
+        <a href="" data-lightbox="gallery"
+          data-title="Our magnificent school building.">
+          <img src="img/gate.jpeg" class="img-fluid gallery-img"
+            alt="School Building">
+        </a>
+      </div>
+      <div class="col-md-4 gallery-item" data-category="labs">
+        <a href="" data-lightbox="gallery"
+          data-title="Students conducting experiments in the science lab.">
+          <img src="img/camp3.jpeg" class="img-fluid gallery-img"
+            alt="Science Lab">
+        </a>
+      </div>
+      <div class="col-md-4 gallery-item" data-category="campus">
+        <a href="img/classroom.jpeg" data-lightbox="gallery"
+          data-title="A vibrant classroom environment.">
+          <img src="img/classroom.jpeg" class="img-fluid gallery-img" alt="Classroom">
+        </a>
+      </div>
+      <div class="col-md-4 gallery-item" data-category="events">
+        <a href="https://via.placeholder.com/800x600?text=Annual+Day" data-lightbox="gallery"
+          data-title="Highlights from our annual day celebrations.">
+          <img src="img/camp3.jpeg" class="img-fluid gallery-img"
+            alt="Annual Day">
+        </a>
+      </div>
+      <div class="col-md-4 gallery-item" data-category="sports">
+        <a href="https://via.placeholder.com/800x600?text=Sports+Event" data-lightbox="gallery"
+          data-title="Students actively participating in a sports event.">
+          <img src="img/ExtraActivity.jpeg" class="img-fluid gallery-img"
+            alt="Sports Event">
+        </a>
+      </div>
+      <div class="col-md-4 gallery-item" data-category="labs">
+        <a href="https://via.placeholder.com/800x600?text=Computer+Lab" data-lightbox="gallery"
+          data-title="Learning in our modern computer lab.">
+          <img src="img/ScouteGuide.jpeg" class="img-fluid gallery-img"
+            alt="Computer Lab">
+        </a>
+      </div>
+      <div class="col-md-4 gallery-item" data-category="events">
+        <a href="https://via.placeholder.com/800x600?text=Cultural+Program" data-lightbox="gallery"
+          data-title="A captivating cultural program performance.">
+          <img src="img/sports.jpeg" class="img-fluid gallery-img"
+            alt="Cultural Program">
+        </a>
+      </div>
+      <div class="col-md-4 gallery-item" data-category="campus">
+        <a href="https://via.placeholder.com/800x600?text=Library" data-lightbox="gallery"
+          data-title="Our well-stocked and serene school library.">
+          <img src="img/Treeplantation.jpeg" class="img-fluid gallery-img" alt="Library">
+        </a>
+      </div>
+      <div class="col-md-4 gallery-item" data-category="sports">
+        <a href="https://via.placeholder.com/800x600?text=Athletics" data-lightbox="gallery"
+          data-title="Future athletes showcasing their skills.">
+          <img src="img/games.jpeg" class="img-fluid gallery-img"
+            alt="Athletics">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer text-center">
+    <p class="mb-0">&copy; 2025 Amruteshwar Secondary and Higher Secondary School. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+  <script>
+    // Lightbox configuration (optional, but good for custom captions)
+    lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true
+    })
+
+    // Gallery Filter Logic
+    document.addEventListener('DOMContentLoaded', function () {
+      const filterButtons = document.querySelectorAll('.filter-buttons .btn');
+      const galleryItems = document.querySelectorAll('.gallery-item');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          // Add active class to the clicked button
+          this.classList.add('active');
+
+          const filterValue = this.getAttribute('data-filter');
+
+          galleryItems.forEach(item => {
+            if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+              item.style.display = 'block'; // Show item
+            } else {
+              item.style.display = 'none'; // Hide item
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
